@@ -8,6 +8,7 @@ public class AdministradordeEmpresasPage extends BasePage {
 
     private String btnmodifyData = "//button[@id='modifica@76486253@00']";
     private String titleh2 = "//h2[normalize-space()='Administrador de Empresas']";
+    private String btnAgregarEmpresa = "//button[@class='btn continua']";
 
     public AdministradordeEmpresasPage(Page page){
         super(page);
@@ -17,7 +18,7 @@ public class AdministradordeEmpresasPage extends BasePage {
         clickElement(btnmodifyData);
     }
 
-    public void validateTitle(){
-        assertThat(page.locator(titleh2)).hasText("Administrador de Empresas");
+    public void validatePage(){
+        assertThat(page.locator(btnAgregarEmpresa)).isEnabled();
     }
 }

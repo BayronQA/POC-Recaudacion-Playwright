@@ -13,11 +13,11 @@ Feature: Automatización de pruebas de Inicio de sesión y modificación de dato
     When Selecciono Modificación datos Empresa
     And Actualizo la direccion <calle> de la empresa
     And Presiono Siguiente paso
-    #Then Valido si cambió la direccion
+    Then Valido si cambió la direccion <calle>
     And Presiono Confirmar
 
     Examples:
       |calle|
-      |Calle numero 40|
-      |Calle numero 41|
+      |Calle numero 33|
+      |Calle numero 32|
 

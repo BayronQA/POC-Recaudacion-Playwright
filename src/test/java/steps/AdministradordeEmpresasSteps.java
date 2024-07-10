@@ -17,7 +17,7 @@ public class AdministradordeEmpresasSteps {
     }
     @Given("Estoy en el menú de actualización de datos")
     public void validateTitle(){
-        administradordeEmpresasPage.validateTitle();
+        administradordeEmpresasPage.validatePage();
     }
     @When("Selecciono Modificación datos Empresa")
     public void clickModifyDataEmpresa(){

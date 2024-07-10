@@ -19,7 +19,7 @@ public class LoginPageSteps {
         loginPage.sendTextPass();
     }
     @And("Presiono el botón Ingresar")
-    public void clickBtnLoginPage(){
+    public void clickBtnLoginPage() throws InterruptedException {
         loginPage.validateBtn();
         loginPage.clickBtnLogin();
     }

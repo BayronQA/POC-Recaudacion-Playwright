@@ -30,7 +30,9 @@ public class LoginPage extends BasePage{
 
     }
 
-    public void clickBtnLogin() {
+    public void clickBtnLogin() throws InterruptedException {
+        Thread.sleep(3000);
         clickElement(loginBtn);
+
     }
 }

@@ -29,8 +29,4 @@ public class ModificacionEmpresaSteps {
         modificacionEmpresaPage.clickSiguientePaso();
     }
 
-    @Then("Valido si cambió la dirección")
-    public void validateChange(String calle) {
-        Assert.assertEquals(modificacionEmpresaPage.getValorEnviado(), confirmacionModificacionEmpresa.getTextConfirmCalle());
-    }
 }

@@ -1,5 +1,6 @@
 package pages;
 
+import com.microsoft.playwright.ElementHandle;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
@@ -22,7 +23,9 @@ public class ConfirmacionModificacionEmpresa extends BasePage{
         clickElement(btnConfirmar);
     }
     public String getTextConfirmCalle(){
-        return textFromElement(ConfirmCalle);
+        ElementHandle elemento  = page.querySelector(ConfirmCalle);
+        String textConfirmCalle = elemento.innerText();
+        return textConfirmCalle;
 
     }
 

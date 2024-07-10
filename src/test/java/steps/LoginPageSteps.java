@@ -2,8 +2,11 @@ package steps;
 
 import com.microsoft.playwright.Page;
 import config.DependencyInjector;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
+import org.junit.After;
 import pages.LoginPage;
+import utils.ScreenshotUtil;
 
 public class LoginPageSteps {
     private Page page;
@@ -23,5 +26,8 @@ public class LoginPageSteps {
         loginPage.validateBtn();
         loginPage.clickBtnLogin();
     }
-
+    @After
+    public void tearDown(Scenario scenario) {
+        ScreenshotUtil.takeScreenshotOnFailure(page, scenario);
+    }
 }

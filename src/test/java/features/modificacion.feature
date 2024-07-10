@@ -18,6 +18,7 @@ Feature: Automatización de pruebas de Inicio de sesión y modificación de dato
 
     Examples:
       |calle|
-      |Calle numero 33|
-      |Calle numero 32|
+      |Calle 33|
+      |Calle 32|
+      |Calle 31|
 

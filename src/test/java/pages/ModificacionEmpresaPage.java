@@ -9,7 +9,7 @@ public class ModificacionEmpresaPage extends BasePage{
     private String inputCalle = "//input[@id='web_dir_calle']";
     private String btnSiguientePaso = "//button[@id='boton_aceptar']";
     private String valorEnviado;
-    public String valorprueba = "Calle numero 33";
+    public String valorprueba = "Valor de prueba";
 
     public ModificacionEmpresaPage(Page page){
         super(page);

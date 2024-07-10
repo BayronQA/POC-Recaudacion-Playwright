@@ -2,8 +2,11 @@ package steps;
 
 import com.microsoft.playwright.Page;
 import config.DependencyInjector;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Then;
+import org.junit.After;
 import pages.PagoCotizacionesPage;
+import utils.ScreenshotUtil;
 
 public class PagoCotizacionesSteps {
 
@@ -18,5 +21,8 @@ public class PagoCotizacionesSteps {
     public void clickOnRolTE(){
         pagoCotizacionesPage.joinToRolTE();
     }
-
+    @After
+    public void tearDown(Scenario scenario) {
+        ScreenshotUtil.takeScreenshotOnFailure(page, scenario);
+    }
 }

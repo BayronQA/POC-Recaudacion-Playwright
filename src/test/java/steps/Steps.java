@@ -6,9 +6,11 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import config.DependencyInjector;
 import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import pages.HomePage;
+import utils.ScreenshotUtil;
 
 import java.nio.file.Paths;
 
@@ -31,6 +33,11 @@ public class Steps {
         homePage.clickOnIngresarAqui();
 
 
+    }
+
+    @After
+    public void tearDown(Scenario scenario) {
+        ScreenshotUtil.takeScreenshotOnFailure(page, scenario);
     }
 
 
